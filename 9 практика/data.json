@@ -1,0 +1,32 @@
+[
+    {
+      "class": "овощ",
+      "species": "баклажан",
+      "specialization": "не вкусно"
+    },
+    {
+        "class": "овощ",
+        "species": "помидор",
+        "specialization": "вкусно"
+    },
+    {
+        "class": "овощ",
+        "species": "огурец",
+        "specialization": "не вкусно"
+    },
+    {
+        "class": "фрукт",
+        "species": "яблоко",
+        "specialization": "не вкусно"
+    },
+    {
+        "class": "фрукт",
+        "species": "груша",
+        "specialization": "вкусно"
+    },
+    {
+        "class": "фрукт",
+        "species": "кокос",
+        "specialization": "не вкусно"
+    }
+  ]
