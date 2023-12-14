@@ -1,32 +1,32 @@
 [
     {
-      "class": "Рыцарь Смерти",
-      "species": "Орк",
-      "specialization": "Кровь"
+      "class": "овощ",
+      "species": "баклажан",
+      "specialization": "не вкусно"
     },
     {
-        "class": "Рыцарь Смерти",
-        "species": "Таурен",
-        "specialization": "Лед"
+        "class": "овощ",
+        "species": "помидор",
+        "specialization": "вкусно"
     },
     {
-        "class": "Рыцарь Смерти",
-        "species": "Зандалар",
-        "specialization": "Нечестивость"
+        "class": "овощ",
+        "species": "огурец",
+        "specialization": "не вкусно"
     },
     {
-        "class": "Маг",
-        "species": "Эльф Крови",
-        "specialization": "Тайная магия"
+        "class": "фрукт",
+        "species": "яблоко",
+        "specialization": "не вкусно"
     },
     {
-        "class": "Маг",
-        "species": "Человек",
-        "specialization": "Огонь"
+        "class": "фрукт",
+        "species": "груша",
+        "specialization": "вкусно"
     },
     {
-        "class": "Маг",
-        "species": "Гном",
-        "specialization": "Лед"
+        "class": "фрукт",
+        "species": "кокос",
+        "specialization": "не вкусно"
     }
   ]
