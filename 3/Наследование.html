@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+    size;
+    color;
+    material;
+}
+
+class cat extends Animal {
+    countHole = 0;
+    tearcat(color){
+        this.color = color;
+        console.log(Вы пнули кота ${bluecat.color} цвета!!!);
+    }
+
+    checkMaterialcat(material){
+        this.material = material;
+        console.log(Ваш кот пушистый - ${bluecat.material}.)
+    }
+}
+
+class Dog extends Animal {
+    countHole = 0;
+    countButton = 6;
+    tearDog(color){
+        this.color = color;
+        console.log(Вы пнули кота ${whiteDog.color} цвета!!!);
+    }
+
+    checkMaterialDog(material){
+        this.material = material;
+        console.log(Вы пнули пса - ${whiteDog.material}.);
+    }
+    
+}
+
+let whiteDog = new Dog();
+let bluecat = new cat();
+bluecat.tearcat("Рыжего");
+bluecat.checkMaterialcat("Пушистого");
+whiteDog.tearDog("белого");
+whiteDog.checkMaterialDog("Лысого")
+    </script>
+</body>
+</html>

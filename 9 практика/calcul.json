@@ -1,0 +1,32 @@
+[
+    {
+      "class": "Рыцарь Смерти",
+      "species": "Орк",
+      "specialization": "Кровь"
+    },
+    {
+        "class": "Рыцарь Смерти",
+        "species": "Таурен",
+        "specialization": "Лед"
+    },
+    {
+        "class": "Рыцарь Смерти",
+        "species": "Зандалар",
+        "specialization": "Нечестивость"
+    },
+    {
+        "class": "Маг",
+        "species": "Эльф Крови",
+        "specialization": "Тайная магия"
+    },
+    {
+        "class": "Маг",
+        "species": "Человек",
+        "specialization": "Огонь"
+    },
+    {
+        "class": "Маг",
+        "species": "Гном",
+        "specialization": "Лед"
+    }
+  ]

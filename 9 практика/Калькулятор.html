@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>colculator</title>
+</head>
+<body>
+    <div id="app">
+        <div class="grid">
+            <input @keyup.enter="calc()" type="text" v-model="result" placeholder="0">
+            <button @click="input(num)" class="cell num" v-for="num in numbers">{{num}}</button>
+            <button @click="input(op)" class="cell op" v-for="op in operations">{{op}}</button>
+            <button @click="reset()" class="cell op">Reset</button>
+            <button @click="calc()" class="cell op">=</button>
+        </div>
+        
+    </div>
+
+  <div align="center">
+  <input value="Нажми меня и произойдет чудо!" onclick="alert('ЧУДО!')" type="button"><br>
+  <input type="button" onclick="this.hidden=true" value="Спрячь меня"><br>
+  </div>
+  <div align="center" id="myDiv">Наведитесь на меня!!!</div>
+  <div align="center">
+    <form id="myForm">
+      <input type="text" name="username">
+      <input type="password" name="password">
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <div align="center" class="container">
+    <div class="table">
+        <div id="auto-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Класс</th>
+                        <th>Раса</th>
+                        <th>Специализация</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{ item.class }}</td>
+                        <td>{{ item.species }}</td>
+                        <td>{{ item.specialization }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+  <div align="center" id="FirstVue">
+    <button v-on:click="doSomething">Нажми меня</button>
+    <button v-on:dblclick="DoubleClick">На меня потыкай -_-</button>
+  </div>
+
+  <div align="center" id="SecondVue" v-on:mouseover="handleMouseover" v-on:mouseleave="handleMouseleave">Наведи на меня курсор</div>
+
+  <div id="components">
+    <button-counter></button-counter>
+  </div>
+
+
+  <script src="Калькулятор.js">
+  </script>
+</body>
+</html>
