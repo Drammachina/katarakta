@@ -1,38 +1,51 @@
-var vue = new Vue({
-  el:'#app',
+var app = new Vue({
+  el: '#app',
   data: {
-      result: '',
-      numbers:[1,2,3,4,5,6,7,8,9,0],
-      operations:['+','-','*','/']
+    FirstNumber: 0,
+    operator: null,
+    SecondNumber: 0,
+    waitingForOperand: false,
   },
   methods: {
-      input:function(char){
-          this.result = this.result.tostring();
-          this.result+=char;
-      },
-      reset: function(){
-          this.result = '';
-      },
-      calc: function(){
-          this.result = eval(this.result);
+    addNumber: function(number) {
+      if (this.waitingForOperand) {
+        this.FirstNumber = number;
+        this.waitingForOperand = false;
+      } else {
+        this.FirstNumber = this.FirstNumber * 10 + number;
       }
-  }
-});
-
-let app1 = new Vue({
-    el: '#auto-table',
-    data: {
-        items: []
     },
-    created: function() {
-        fetch('calcul.json')
-            .then(response => response.json())
-            .then(data => {
-                this.items = data;
-            });
-    }
+    addOperator: function(operator) {
+      this.operator = operator;
+      this.SecondNumber = this.FirstNumber;
+      this.waitingForOperand = true;
+    },
+    calculate: function() {
+      switch (this.operator) {
+        case '+':
+          this.FirstNumber = this.FirstNumber + this.SecondNumber;
+          break;
+        case '-':
+          this.FirstNumber = this.SecondNumber - this.FirstNumber;
+          break;
+        case '*':
+          this.FirstNumber = this.FirstNumber * this.SecondNumber;
+          break;
+        case '/':
+          this.FirstNumber = this.SecondNumber / this.FirstNumber;
+          break;
+      }
+      this.operator = null;
+      this.waitingForOperand = true;
+    },
+    clear: function() {
+      this.FirstNumber = 0;
+      this.operator = null;
+      this.SecondNumber = 0;
+      this.waitingForOperand = false;
+    },
+  },
 });
-
 
 
 let Hover = document.getElementById("myDiv");
@@ -70,10 +83,10 @@ new Vue({
   el: '#SecondVue',
   methods:{
     handleMouseover(){
-      console.log('Положи 100 рублей и уходи!!!')
+      console.log('Навёл курсор')
     },
     handleMouseleave(){
-      console.log('А где 100 рублей не понял -_-')
+      console.log('')
     }
   }
 })
@@ -91,7 +104,7 @@ Vue.component('button-counter', {
 
 })
 Vue.component('hello-world',{
-  template:'<h3>Привет мир!</h3>',
+  template:'<h3>Кушать надо вкусно</h3>',
 })
 
 new Vue({ 
