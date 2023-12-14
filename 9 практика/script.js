@@ -98,10 +98,10 @@ new Vue({
 el: '#SecondVue',
 methods:{
   handleMouseover(){
-    console.log('Положи 100 рублей и уходи!!!')
+    console.log('Навёл курсор')
   },
   handleMouseleave(){
-    console.log('А где 100 рублей не понял -_-')
+    console.log('Убрал курсор')
   }
 }
 })
@@ -119,7 +119,7 @@ template:`<div>
 
 })
 Vue.component('hello-world',{
-template:'<h3>Привет мир!</h3>',
+template:'<h3>Текст выведенный функцией Vue</h3>',
 })
 
 new Vue({ 
