@@ -79,6 +79,41 @@ new Vue({
   }
 })
 
+let app1 = new Vue({
+  el: '#auto-table',
+  data: {
+      items: []
+  },
+  created: function() {
+      fetch('calcul.json') 
+          .then(response => response.json())
+          .then(data => {
+              this.items = data;
+          });
+  }
+});
+
+
+
+let Hover = document.getElementById("myDiv");
+Hover.addEventListener("mouseover", function() {
+Hover.style.backgroundColor = "yellow";
+});
+Hover.addEventListener("mouseout", function() {
+Hover.style.backgroundColor = "";
+});
+
+const form = document.querySelector('#myForm');
+form.onsubmit = function() {
+alert(Ваши данные отправлены)
+};
+
+document.onkeydown = function(event) {
+if (event.keyCode === 13) {
+  alert('Вы нажали ENTER!!!')
+}
+};
+
 new Vue({
   el: '#SecondVue',
   methods:{
