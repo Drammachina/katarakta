@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link rel="stylesheet" href="Калькулятор.css">
-    <title>colalator</title>
+  <meta charset="utf-8">
+  <title>Калькулятор на Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="Калькулятор.css">
 </head>
 <body>
-    <div id="app">
-        <div class="grid">
-            <input @keyup.enter="calc()" type="text" v-model="result" placeholder="0">
-            <button @click="input(num)" class="cell num" v-for="num in numbers">{{num}}</button>
-            <button @click="input(op)" class="cell op" v-for="op in operations">{{op}}</button>
-            <button @click="reset()" class="cell op">Reset</button>
-            <button @click="calc()" class="cell op">=</button>
-        </div>
-        
+  <div align="center" id="app">
+    <div class="calculator">
+      <div class="display">{{ FirstNumber }}</div>
+      <div class="buttons">
+        <button class="number" @click="addNumber(1)">1</button>
+        <button class="number" @click="addNumber(2)">2</button>
+        <button class="number" @click="addNumber(3)">3</button>
+        <button class="operator" @click="addOperator('+')">+</button>
+        <button class="number" @click="addNumber(4)">4</button>
+        <button class="number" @click="addNumber(5)">5</button>
+        <button class="number" @click="addNumber(6)">6</button>
+        <button class="operator" @click="addOperator('-')">-</button>
+        <button class="number" @click="addNumber(7)">7</button>
+        <button class="number" @click="addNumber(8)">8</button>
+        <button class="number" @click="addNumber(9)">9</button>
+        <button class="operator" @click="addOperator('/')">/</button>
+        <button class="operator" @click="clear()">AC</button>
+        <button class="number" @click="addNumber(0)">0</button>
+        <button class="operator" @click="calculate()">=</button>
+        <button class="operator" @click="addOperator('*')">*</button>
+      </div>
     </div>
+  </div>
 
   <div align="center">
   <input value="Нажми меня и произойдет чудо!" onclick="alert('ЧУДО!')" type="button"><br>
@@ -65,6 +77,11 @@
     <button-counter></button-counter>
   </div>
 
+
+  <script src="Калькулятор.js">
+  </script>
+</body>
+</html>
 
   <script src="Калькулятор.js">
   </script>
